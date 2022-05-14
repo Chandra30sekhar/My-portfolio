@@ -6,6 +6,7 @@
     --lightblue: #00B4D8;
     --neongreen: #06FF00;
     --verydarkblue: #2A2550;
+    --red: #F32424;
 }
 
 *{
@@ -36,6 +37,7 @@ body{
     background-color: var(--black);
     position: fixed;
     z-index: 9999;
+    box-shadow: 0.8px 0.8px 10px black;
 }
 
 #toggler, 
@@ -47,7 +49,6 @@ body{
     text-align: left;
     text-decoration: none;
     position: relative;
-    
     color: var(--orange);
 }
 
@@ -56,37 +57,6 @@ body{
     display: flex;
     gap: 25px;
 }
-
-@media (max-width: 1400px){
-    .menu{
-      width: 100%;
-      max-height: 0;
-      overflow: hidden;
-    }
-    .list{
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-    }
-    
-    .navbar label{
-      display: inline;
-      align-items: center;
-      cursor: pointer;
-    }
-    #toggler:checked ~ .menu{
-      max-height: 100%;
-    }
-    .nav-link:hover{
-        color: var(--lightgrey);
-        border-bottom: 5px solid var(--orange);
-        transition: 0.3s;
-        width: 100%;
-    }
-
-
-}
-  
 
 .nav-link{
     margin: 0 20px 0 20px;
@@ -131,7 +101,13 @@ body{
 #education{
     width: 100%;
     height: 100vh;
-    background-color: tomato;
+    background-color: #f3f3f3;
+    padding: 2%;
+}
+
+.my-edu{
+    margin: 0;
+    font-size: 3em;
 }
 
 /* Certification section */
@@ -139,6 +115,7 @@ body{
     width: 100%;
     height: 100vh;
     background-color: #f3f3f3;
+    padding: 2%;
 }
 
 .certificate-contents{
@@ -181,16 +158,16 @@ body{
 
 /* End of certificate section */
 
-#projects{
+/* #projects{
     width: 100%;
     height: 100vh;
     background-color: black;
-}
+} */
 
 #resume{
     width: 100%;
     height: 100vh;
-    background-color: #f3f3f3;
+    background-color: var(--lightgrey);
     text-align: center;
 }
 
@@ -201,32 +178,99 @@ body{
     transform: translate(-50%, -50%);
 }
 
-#resume-docx{
+@media (max-width: 800px){
+    .resume-download-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .res-btn{
+        margin: 30px;
+    }
+}
+
+.res-btn{
     width: 200px;
     height: 50px;
-    background-color: var(--lightblue);
+    border-radius: 3em;
+    cursor: pointer;
+    margin-left: 100px;
+    text-transform: uppercase;
+    border: none;
+}
+
+#resume-docx{
+    background-color: #035397;
+    box-shadow: 1px 1px 10px var(--black);   
+}
+
+#resume-docx:hover{
+    box-shadow: 2px 2px 15px var(--lightblue);
+    transition: 0.2s;
 }
 
 #resume-pdf{
-    width: 200px;
-    height: 50px;
-    background-color: tomato;
+    background-color: var(--red);
+    box-shadow: 1px 1px 10px var(--black);
+}
+
+#resume-pdf:hover{
+    box-shadow: 2px 2px 15px tomato;
+    transition: 0.2s;
 }
 
 .download-link{
     width: 100%;
+    text-decoration: none;
+    color: #f3f3f3;
+    font-weight: bold;
 }
 
 #contact{
     width: 100%;
-    height: 100vh;
+    height: 50vh;
     background-color: green;
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    border-spacing: 50px;
+}
+
+.outer{
+    position: relative;
+    top: -30px;
+    width: 200px;
+    height: 30px;
+    background-color: white;
+    display: inline-block;
+}
+
+.inner{
+    position: relative;
+    width: 0;
+	height: 0;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 10px solid white;
+    top: 30px;
+}
+
+.wrapper{
+    display: none;
+}
+
+.contact-details{
+    position: relative;
+    top: 40%;
 }
 
 footer{
     position: relative;
     width: 100%;
-    height: 100px;
+    height: 200px;
     background-color: royalblue;
 }
 
@@ -256,3 +300,36 @@ footer{
         margin: 5px auto 5px auto;
     }
 }
+
+
+/* Media query for navigation bar */
+@media (max-width: 1400px){
+    .menu{
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+    }
+    .list{
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    
+    .navbar label{
+      display: inline;
+      align-items: center;
+      cursor: pointer;
+    }
+    #toggler:checked ~ .menu{
+      max-height: 100%;
+    }
+    .nav-link:hover{
+        color: var(--lightgrey);
+        border-bottom: 5px solid var(--orange);
+        transition: 0.3s;
+        width: 100%;
+    }
+
+
+}
+  
