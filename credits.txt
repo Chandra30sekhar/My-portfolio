@@ -1,2 +1,5 @@
 favicon-https://icons8.com/
 background: https://coolbackgrounds.io/
+
+school image: <a href='https://www.freepik.com/vectors/university-campus'>University campus vector created by pch.vector - www.freepik.com</a>
+document image : <a href='https://www.freepik.com/vectors/paper-icon'>Paper icon vector created by rawpixel.com - www.freepik.com</a>

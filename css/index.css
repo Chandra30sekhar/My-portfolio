@@ -7,6 +7,7 @@
     --neongreen: #06FF00;
     --verydarkblue: #2A2550;
     --red: #F32424;
+    --gold: #F0A500;
 }
 
 *{
@@ -34,7 +35,7 @@ body{
     width: 100%;
     padding: 20px;
     top: 0;
-    background-color: var(--black);
+    background-color: var(--verydarkblue);
     position: fixed;
     z-index: 9999;
     box-shadow: 0.8px 0.8px 10px black;
@@ -101,8 +102,19 @@ body{
 #education{
     width: 100%;
     height: 100vh;
-    background-color: #f3f3f3;
+    background-color: white;
     padding: 2%;
+    background-image: url('../images/college.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+#college-img{
+    position: relative;
+    height: 300px;
+    width: 300px;
+    left: 60%;
 }
 
 .my-edu{
@@ -114,7 +126,7 @@ body{
 #certificates{
     width: 100%;
     height: 100vh;
-    background-color: #f3f3f3;
+    background-color: white;
     padding: 2%;
 }
 
@@ -167,8 +179,12 @@ body{
 #resume{
     width: 100%;
     height: 100vh;
-    background-color: var(--lightgrey);
+    background-color: whites;
     text-align: center;
+    background-image: url('../images/37007.jpg');
+    background-size: 800px 600px;
+    background-repeat: no-repeat;
+    background-position: right center;
 }
 
 .resume-download-div{
@@ -186,7 +202,7 @@ body{
     }
 
     .res-btn{
-        margin: 30px;
+        margin: 10px;
     }
 }
 
@@ -230,16 +246,20 @@ body{
 #contact{
     width: 100%;
     height: 50vh;
-    background-color: green;
+    background-color: white;
     display: flex;
     justify-content: center;
+    background-image: url('../images/3459559.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
 }
 
 table{
     border-spacing: 50px;
 }
 
-.outer{
+/* .outer{
     position: relative;
     top: -30px;
     width: 200px;
@@ -265,15 +285,28 @@ table{
 .contact-details{
     position: relative;
     top: 40%;
-}
+} */
 
 footer{
     position: relative;
     width: 100%;
-    height: 200px;
-    background-color: royalblue;
+    height: auto;
+    background-color: var(--verydarkblue);
+    padding: 3%;
 }
 
+#footer-title{
+    color: white;
+}
+
+footer>ul{
+    list-style-type: none;
+}
+
+footer>ul>li>a{
+    text-decoration: none;
+    color: var(--gold);
+}
 
 /* Media queries for mobile devices and tablets */
 @media (max-width: 800px) and (orientation: portrait){
@@ -298,6 +331,9 @@ footer{
     }
     .certificate-link{
         margin: 5px auto 5px auto;
+    }
+    #home, #education{
+        background: none;
     }
 }
 
